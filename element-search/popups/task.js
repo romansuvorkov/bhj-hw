@@ -2,7 +2,6 @@
 const mainModal = document.getElementById('modal_main');
 const modalSuccess = document.getElementById('modal_success');
 const closeBtn = Array.from(document.getElementsByClassName('modal__close'));
-console.log(closeBtn);
 const show_success = Array.from(document.getElementsByClassName('show-success'));
 
 mainModal.classList.add('modal_active');
