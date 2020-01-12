@@ -15,7 +15,7 @@ links.forEach (e =>
         tooltipBlock[0].innerText = `${this.title}`;
         let coordinates = this.getBoundingClientRect();
         console.log(coordinates.height);
-        tooltipBlock[0].style = `left: ${coordinates.x}px; top: ${coordinates.y - coordinates.height}px`;
+        tooltipBlock[0].style = `left: ${coordinates.x}px; top: ${coordinates.y + coordinates.height}px`;
         console.log(coordinates.x);
         tooltipBlock[0].classList.add('tooltip_active');
     })

@@ -32,17 +32,17 @@ addToCart.forEach(e => {
         let product = this.closest('.product');
         let img = Array.from(product.getElementsByTagName('img'));
         let quantity = Array.from(product.getElementsByClassName('product__quantity-value'));
-        let isInCart;
+        let productInCart;
 
         for (let i = 0; i < cart.length; i++) {
             if (cart[i].getAttribute("data-id") === product.getAttribute("data-id")) {
-                isInCart = cart[i];
+                productInCart = cart[i];
             }
         }
         
-        if (isInCart !== undefined) {
+        if (productInCart !== undefined) {
             
-            let nowInCart = Array.from(isInCart.getElementsByClassName('cart__product-count'));
+            let nowInCart = Array.from(productInCart.getElementsByClassName('cart__product-count'));
             nowInCart[0].innerText = parseInt(nowInCart[0].innerText) + parseInt(quantity[0].innerText)
 
         } else {
