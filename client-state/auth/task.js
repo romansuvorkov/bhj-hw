@@ -3,7 +3,7 @@ let sighInBtn = document.getElementById('signin__btn');
 let form = document.getElementById('signin__form');
 let welcomeBlock = document.getElementById('welcome');
 let userID = document.getElementById('user_id');
-// localStorage.clear();
+
 if (localStorage.user_id) {
     userID.innerText = localStorage.user_id;
     welcomeBlock.classList.add('welcome_active');
@@ -12,6 +12,7 @@ if (localStorage.user_id) {
 }
 
 sighInBtn.addEventListener('click', function (e) {
+    e.preventDefault();
     let formData = new FormData(form);
     let checkUser = new XMLHttpRequest();
     checkUser.open('POST', 'https://netology-slow-rest.herokuapp.com/auth.php');
@@ -33,7 +34,7 @@ sighInBtn.addEventListener('click', function (e) {
         }
             
     }
-    e.preventDefault();
+
 });
 
 

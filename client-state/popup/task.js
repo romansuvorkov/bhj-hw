@@ -1,8 +1,7 @@
 const mainModal = document.getElementById('subscribe-modal');
 const closeBtn = Array.from(mainModal.getElementsByClassName('modal__close'));
-// document.cookie = 'modalClosed=; Expires=Thu, 01 Jan 1970 00:00:00 GMT';
-console.log(document.cookie);
-// document.cookie = 'modalClosed=true';
+
+
 function findCookie(input) {
     let cookie = "; " + document.cookie;
     let parts = cookie.split("; " + input + "=");
